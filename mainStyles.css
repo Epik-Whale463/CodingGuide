@@ -3,11 +3,18 @@
 header{
   display: flex;
   flex-direction: column;
-  background-color: #092635;
-  height: 4rem;
+  background-color: #004EF5;
+  height: 5rem;
   width: auto;
 
-  border-radius: 0.65rem;
+  border-radius: 1.65rem;
+}
+
+#logo{
+  position: absolute;
+  height: 80px;
+  width: 100px;
+  border-radius: 1px;
 }
 
 .menu-item{
@@ -20,22 +27,23 @@ header{
 }
 
 .btn{
-  height: 2rem;
+  height: 2.8rem;
   width: 7rem;
-  background-color: #EEF0E5;
+  background-color: #ffffff;
   border: 0px;
-  border-radius: 0.70rem;
-  box-shadow: 6px 0.8px rgb(224, 194, 194);
+  border-radius: 1.40rem;
+  box-shadow: 6px 0.8px rgb(255, 255, 255);
   transition: transform 0.1  ease;
 }
 
 .btn:hover{
   transform: scale(1.1);
+  background-color:  rgb(255, 255, 167);
   box-shadow: 9px 6px rgb(10, 0, 0);
 }
 
 .btn:active{
-  box-shadow: 6px 0.4px rgb(253, 137, 137);
+  box-shadow: 6px 0.4px #004EF5;
   transform: scale(1);
   transition: transform 0.7  ease;
 }
@@ -44,7 +52,7 @@ header{
   position: relative;
   top: 50%;
   left: 50%;
-  transform:translate(-50%, -80%) ;
+  transform:translate(-50%, -100%) ;
   margin: 0px;
   
   font-family:Helvetica;
@@ -54,30 +62,43 @@ header{
 
 /* FIRST SECTION STYLING */
 
-#first-sec{
+#first-sec {
   display: flex;
   color: white;
   flex-direction: column;
-  margin: 0px;
+  margin: 0;
   margin-top: 13px;
   padding-top: 1px;
-  border: 0px;
-  border-radius: 0.65rem;
-  background-color: #092635;
+  border: 0;
+  border-radius: 1.65rem;
+  background-color: #64C0F5;
   height: 10rem;
+  transition: background-color 0.3s ease; /* Set a shorter transition duration */
 }
 
-#first-sec h1{
-  text-align: center;
-  font-size: 4.3rem;
-  font-family: 'Josefin Sans';
+#first-sec:hover {
+  background-color: rgb(255, 255, 167);
 }
+
+#first-sec h1 {
+  text-align: center;
+  font-size: 4.4rem;
+  font-family: 'Josefin Sans';
+  color: rgb(255, 255, 105);
+  letter-spacing: 5px;
+  transition: color 0.3s ease; /* Set a shorter transition duration */
+}
+
+#first-sec h1:hover {
+  color: #092635;
+}
+
 
 #second-sec{
   display: flex;
   flex-direction: column;
   height: 60rem;
-  background-color: #A9B388;
+  background-color: #a4d0ff;
   margin-top: 10px;
   padding-top: 100px;
   border: 0px;
@@ -85,7 +106,49 @@ header{
 
 #second-sec p{
   font-size: 1.2rem;
-  
+  color: rgb(0, 0, 0);
+}
+
+.main-content{
+  width: 72rem;
+  text-align: center;
+  margin-left: 14rem;
+  border-top: 0px;
+  border-bottom: 0px;
+  padding: 100px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+
+.search-container {
+  position: absolute;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 130px;  
+  transition: margin-left 0.3s ease;  
+}
+
+.search-box {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 500px;
+  box-sizing: border-box;
+  transition: width 0.3s ease;  
+}
+
+.search-button {
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: width 0.3s ease;  
 }
 
 
@@ -95,18 +158,84 @@ header{
 
 
 
-
-
-footer{
+footer {
   display: flex;
-  flex-direction: column;
-  background-color: #092635;
+  flex-direction: row;
+  background-color: #ffffff;
   height: 5rem;
   width: auto;
-  margin: 0px;
+  margin: 0;
   margin-top: 6px;
   padding-top: 1px;
-  border: 0px;
+  border: 1.6px solid black;
   border-radius: 0.65rem;
 }
 
+
+
+.linkedin-button {
+  height: 4rem;
+  width: 10rem;
+  background-color: #0077B5;  
+  color: #fff;  
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #005885; /* Darker color on hover */
+}
+.linkedin-button:active {
+  background-color: #0077B5; 
+}
+
+
+
+.instagram-button {
+  height: 4rem;
+  width: 10rem;
+  background-color: #E4405F; /* Instagram's brand color */
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.instagram-button:hover {
+  background-color: #C13584; /* Darker color on hover */
+}
+
+.instagram-button:active {
+  background-color: #E4405F;
+}
+
+
+ 
+@media (max-width: 1320px) {
+  .search-container {
+    margin-left: 100px; /* Adjust the margin for smaller screens */
+  }
+
+  .search-box {
+    width: 400px; /* Adjust the width for smaller screens */
+  }
+
+  .search-button {
+    width: 70px; /* Adjust the width for smaller screens */
+  }
+
+  .main-content {
+    width: 80%; /* Adjust the width for smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #second-sec{
+    height: 70rem;
+  }
+}
